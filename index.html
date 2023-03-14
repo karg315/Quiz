@@ -28,8 +28,11 @@
                     <form action="post" id="checkword1">
                         <ul>
                             <li>
-                                <label for="word1">La frase es no me acuerdo juas juas</label>
-                                <input type="text" name="word1" id="word1" placeholder="Word">
+                                <div id="palabra1">
+                                    <input type="text" name="word1" id="word1" placeholder="Word">
+                                    <label for="word1">was the name of the technique used by the Muiscas to create a
+                                        durable metal alloy</label>
+                                </div>
                                 <button type="submit">Check</button>
                             </li>
                         </ul>
@@ -37,8 +40,11 @@
                     <form action="post" id="checkword2">
                         <ul>
                             <li>
-                                <label for="word2">La frase es no me acuerdo juas juas</label>
-                                <input type="text" name="word2" id="word2" placeholder="Word">
+                                <div id="palabra2">
+                                    <input type="text" name="word2" id="word2" placeholder="Word">
+                                    <label for="word2">is the heart of a network of villages inhabited by the
+                                        Taironas</label>
+                                </div>
                                 <button type="submit">Check</button>
                             </li>
                         </ul>
@@ -46,8 +52,9 @@
                     <form action="post" id="checkword3">
                         <ul>
                             <li>
-                                <label for="word3">La frase es no me acuerdo juas juas</label>
+                                <label for="word3">The Uitoto maloca is predominantly octagonal in shape with a</label>
                                 <input type="text" name="word3" id="word3" placeholder="Word">
+                                <h3>roof.</h3>
                                 <button type="submit">Check</button>
                             </li>
                         </ul>
@@ -70,6 +77,9 @@
                         <div class="char">
                             <p id="c3">_</p>
                         </div>
+                        <div class="char">
+                            <p id="c4">_</p>
+                        </div>
                     </div>
                     <br />
                     <form action="post" id="checkchar">
@@ -81,54 +91,62 @@
                 </div>
             </div>
             <hr />
-            <h4>Live image:</h4>
+            <div id="live-image">
+                <h4 id="live">Live image: </h4>
+                <img src="./images/red dot2.gif" alt="red dot blinking" height="20" width="20" id="reddot">
+            </div>
             <div class="hangman-container">
                 <img src="./images/hangman0.jpg" alt="" width="400" height="500" id="imgHangman">
             </div>
         </section>
 
         <section id="last">
-            <!-- <div class="row"> -->
+            <form action="post" id="orderWord">
+                <!-- <div class="row"> -->
                 <!-- <div class="col-md-12"> -->
-                    <h2>Order the word</h2>
-                    <div class="letters-container">
-                        <img class="letter" src="./images/a.jpg" alt="A" draggable="true" ondragstart="drag(event)"
-                            id="letterA1">
-                        <img class="letter" src="./images/k.jpg" alt="K" draggable="true" ondragstart="drag(event)"
-                            id="letterK1">
-                        <img class="letter" src="./images/y.jpg" alt="Y" draggable="true" ondragstart="drag(event)"
-                            id="letterY1">
-                    </div>
-                    <div class="letters-container">   
-                        <img class="letter" src="./images/o.jpg" alt="O" draggable="true" ondragstart="drag(event)"
-                            id="letterO1">
-                        <img class="letter" src="./images/l.jpg" alt="L" draggable="true" ondragstart="drag(event)"
-                            id="letterL1">
-                    </div> 
+                <h2>Order the word</h2>
+                <div class="letters-container" id="letters-container">
+                    <img class="letter" src="./images/a.jpg" alt="A" draggable="true" ondragstart="drag(event, 1)"
+                        id="letterA1">
+                    <img class="letter" src="./images/n.jpg" alt="N" draggable="true" ondragstart="drag(event, 2)"
+                        id="letterN1">
+                    <img class="letter" src="./images/z.jpg" alt="Z" draggable="true" ondragstart="drag(event, 3)"
+                        id="letterZ1">
+                    <img class="letter" src="./images/h.jpg" alt="H" draggable="true" ondragstart="drag(event, 4)"
+                        id="letterH1">
+                    <img class="letter" src="./images/u.jpg" alt="U" draggable="true" ondragstart="drag(event, 5)"
+                        id="letterU1">
+                </div>
                 <!-- </div> -->
-            <!-- </div> -->
+                <!-- </div> -->
 
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="boxes-container">
-                        <div class="figure">
-                            <div class="box" id="box1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                        </div>
-                        <div class="figure">
-                            <div class="box" id="box2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                        </div>
-                        <div class="figure">
-                            <div class="box" id="box3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                        </div>
-                        <div class="figure">
-                            <div class="box" id="box4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                        </div>
-                        <div class="figure">
-                            <div class="box" id="box5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="boxes-container">
+                            <div class="figure">
+                                <div class="box" id="box1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </div>
+                            <div class="figure">
+                                <div class="box" id="box2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </div>
+                            <div class="figure">
+                                <div class="box" id="box3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </div>
+                            <div class="figure">
+                                <div class="box" id="box4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </div>
+                            <div class="figure">
+                                <div class="box" id="box5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <hr>
+                <div id="botones-container">
+                    <button type="button" onclick="resetear()">Reset</button>
+                    <button id="btnCheckOrder" type="submit">Check</button>
+                </div>
+            </form>
         </section>
     </div>
 
@@ -246,7 +264,92 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    You wanna kill him LOL <p>&#x1f643;</p>
+                    You really wanna kill him LOL <p>&#x1f643;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal6 lo mismo de arriba x3-->
+    <div class="modal fade" id="WrongModal6" tabindex="-1" aria-labelledby="WrongModal6Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal6Label">Wrong character</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    It's almost like you're trying to lose. Wait, are you? <p>&#x1f9d0;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal7 lo mismo de arriba x2-->
+    <div class="modal fade" id="WrongModal7" tabindex="-1" aria-labelledby="WrongModal7Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal7Label">Are you trying to guess?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You've got a real talent for picking all the wrong letters. Maybe you should try playing the lottery
+                    instead. <p>&#x1f911;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal8 lo mismo de arriba x3-->
+    <div class="modal fade" id="WrongModal8" tabindex="-1" aria-labelledby="WrongModal8Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal8Label">Wrong character</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    At this rate, I might as well start picking letters at random and hope for the best.<p>&#x1f3b2;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal9 lo mismo de arriba x2-->
+    <div class="modal fade" id="WrongModal9" tabindex="-1" aria-labelledby="WrongModal9Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal9Label">Are you trying to guess?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    If guessing wrong was an Olympic sport, you'd be a gold medalist by now.<p>&#x1f947;</p>
                     <hr>
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -279,12 +382,75 @@
         </div>
     </div>
 
+    <!-- CorrectModal2 Para cuando gane en ahorcado -->
+    <div class="modal fade" id="CorrectModal2" tabindex="-1" aria-labelledby="CorrectModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="CorrectModal2Label">Good job!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You saved him! <p>&#x1f396;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CorrectModal3 Para cuando gane en ordenar-->
+    <div class="modal fade" id="CorrectModal3" tabindex="-1" aria-labelledby="CorrectModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="CorrectModal3Label">Well done!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Good job sorting the word<p>&#x1f60e;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal10 Para cuando pierde en ordenar-->
+    <div class="modal fade" id="WrongModal10" tabindex="-1" aria-labelledby="WrongModal10Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal10Label">Try another combination</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Beep Boop<p>&#x1f916;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--1. Hacer las imagenes del Hangman
     2. Que aumenten los fallos y cambie la imagen
     3. Hacer lo de drag and drop -->
 
     <footer>
-        <h5>Kevin Rodríguez | V0.9</h5>
+        <h5>Kevin Rodríguez | Vr1.2</h5>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
