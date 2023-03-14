@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Games</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200&family=Rock+Salt&family=Handlee&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Midterm Games</h1>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Complete the sentence</h2>
+                    <form action="post" id="checkword1">
+                        <ul>
+                            <li>
+                                <label for="word1">La frase es no me acuerdo juas juas</label>
+                                <input type="text" name="word1" id="word1" placeholder="Word">
+                                <button type="submit">Check</button>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="post" id="checkword2">
+                        <ul>
+                            <li>
+                                <label for="word2">La frase es no me acuerdo juas juas</label>
+                                <input type="text" name="word2" id="word2" placeholder="Word">
+                                <button type="submit">Check</button>
+                            </li>
+                        </ul>
+                    </form>
+                    <form action="post" id="checkword3">
+                        <ul>
+                            <li>
+                                <label for="word3">La frase es no me acuerdo juas juas</label>
+                                <input type="text" name="word3" id="word3" placeholder="Word">
+                                <button type="submit">Check</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Hangman</h2>
+                    <div class="char-container">
+                        <div class="char">
+                            <p id="c1">_</p>
+                        </div>
+                        <div class="char">
+                            <p id="c2">_</p>
+                        </div>
+                        <div class="char">
+                            <p id="c3">_</p>
+                        </div>
+                    </div>
+                    <br />
+                    <form action="post" id="checkchar">
+                        <div class="checkchar-container">
+                            <input type="text" name="char1" id="char1" title="char1" placeholder=" ">
+                            <button id="btnCheckChar" type="submit">Check</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr />
+            <h4>Live image:</h4>
+            <div class="hangman-container">
+                <img src="./images/hangman0.jpg" alt="" width="400" height="500" id="imgHangman">
+            </div>
+        </section>
+
+        <section id="last">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-md-12"> -->
+                    <h2>Order the word</h2>
+                    <div class="letters-container">
+                        <img class="letter" src="./images/a.jpg" alt="A" draggable="true" ondragstart="drag(event)"
+                            id="letterA1">
+                        <img class="letter" src="./images/k.jpg" alt="K" draggable="true" ondragstart="drag(event)"
+                            id="letterK1">
+                        <img class="letter" src="./images/y.jpg" alt="Y" draggable="true" ondragstart="drag(event)"
+                            id="letterY1">
+                    </div>
+                    <div class="letters-container">   
+                        <img class="letter" src="./images/o.jpg" alt="O" draggable="true" ondragstart="drag(event)"
+                            id="letterO1">
+                        <img class="letter" src="./images/l.jpg" alt="L" draggable="true" ondragstart="drag(event)"
+                            id="letterL1">
+                    </div> 
+                <!-- </div> -->
+            <!-- </div> -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="boxes-container">
+                        <div class="figure">
+                            <div class="box" id="box1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                        <div class="figure">
+                            <div class="box" id="box2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                        <div class="figure">
+                            <div class="box" id="box3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                        <div class="figure">
+                            <div class="box" id="box4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                        <div class="figure">
+                            <div class="box" id="box5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- WrongModal1 -->
+    <div class="modal fade" id="WrongModal1" tabindex="-1" aria-labelledby="WrongModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal1Label">Wrong word</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Try a different word
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CorrectModal1 -->
+    <div class="modal fade" id="CorrectModal1" tabindex="-1" aria-labelledby="CorrectModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="CorrectModal1Label">Correct word</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You hit the bull's eye
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmptyModal1 -->
+    <div class="modal fade" id="EmptyModal1" tabindex="-1" aria-labelledby="EmptyModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="EmptyModal1Label">Error: Empty input</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Come on, write something
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM224 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal2 -->
+    <div class="modal fade" id="WrongModal2" tabindex="-1" aria-labelledby="WrongModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal2Label">Too many characters</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bro, just 1 character
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal3 Cuando se equivoca en ahorcado-->
+    <div class="modal fade" id="WrongModal3" tabindex="-1" aria-labelledby="WrongModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal3Label">Wrong character</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You are gonna kill him <p>&#x1f480;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal4 lo mismo de arriba x2-->
+    <div class="modal fade" id="WrongModal4" tabindex="-1" aria-labelledby="WrongModal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal4Label">Are you trying to guess?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You wanna kill him LOL <p>&#x1f643;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WrongModal5 Para cuando pierde en ahorcado-->
+    <div class="modal fade" id="WrongModal5" tabindex="-1" aria-labelledby="WrongModal5Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="WrongModal5Label">Well, you could see it coming...</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    You are licensed as a murderer, congratulations.<p>&#x26b0;</p>
+                    <hr>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--1. Hacer las imagenes del Hangman
+    2. Que aumenten los fallos y cambie la imagen
+    3. Hacer lo de drag and drop -->
+
+    <footer>
+        <h5>Kevin Rodríguez | V0.9</h5>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
